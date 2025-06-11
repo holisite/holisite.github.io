@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "bible.nkjv.scripture.christian.studybible.dailyverses.offlinebible.devotionals.holybible",
+      "sha256_cert_fingerprints": [
+        "98:1D:1B:09:1D:8F:4A:23:2D:B9:B9:85:EC:0C:D3:5D:25:83:35:70:0B:3F:0C:C7:60:23:EC:58:E7:F8:FA:80"
+      ]
+    }
+  }
+]
