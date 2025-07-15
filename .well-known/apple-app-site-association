@@ -4,15 +4,35 @@
     "details": [
       {
         "appIDs": [
-            "XCZ83B56HU.nkjv.biblequiz"
+          "XCZ83B56HU.nkjv.biblequiz"
         ],
         "paths": [
           "/universal_links/bible_nkjv/*"
+        ]
+      },
+      {
+        "appIDs": [
+          "XCZ83B56HU.bibleKJV.bible.kingjamesbible"
+        ],
+        "paths": [
+          "/universal_links/bible_kjv/*"
+        ]
+      },
+      {
+        "appIDs": [
+            "XCZ83B56HU.graceapp.womensbible"
+        ],
+        "paths": [
+          "/universal_links/bible_for_women/*"
         ]
       }
     ]
   },
   "webcredentials": {
-    "apps": [ "XCZ83B56HU.nkjv.biblequiz" ]
+    "apps": [
+      "XCZ83B56HU.nkjv.biblequiz",
+      "XCZ83B56HU.bibleKJV.bible.kingjamesbible",
+      "XCZ83B56HU.graceapp.womensbible"
+    ]
   }
 }
