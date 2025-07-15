@@ -10,5 +10,29 @@
         "98:1D:1B:09:1D:8F:4A:23:2D:B9:B9:85:EC:0C:D3:5D:25:83:35:70:0B:3F:0C:C7:60:23:EC:58:E7:F8:FA:80"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "bibleKJV.bible.kingjamesbible",
+      "sha256_cert_fingerprints": [
+        "BD:12:89:59:F3:98:90:C9:BD:8A:EC:11:30:85:FC:4E:84:9B:54:F0:40:23:A2:A0:B8:DD:F6:03:80:B0:FA:94"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "womensbible.study.devotional.dailyscripture.bible",
+      "sha256_cert_fingerprints": [
+        "A4:6E:2F:B9:E0:A9:8C:4E:02:F1:3A:4A:AA:F9:4F:B4:7D:48:4E:63:EE:04:2C:26:94:65:5A:DC:5E:4D:4C:81"
+      ]
+    }
   }
 ]
