@@ -34,5 +34,17 @@
         "A4:6E:2F:B9:E0:A9:8C:4E:02:F1:3A:4A:AA:F9:4F:B4:7D:48:4E:63:EE:04:2C:26:94:65:5A:DC:5E:4D:4C:81"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "bible.niv.holybible.offlinebible.dailyverse.biblestudy",
+      "sha256_cert_fingerprints": [
+        "2A:A5:4D:EF:B7:AE:66:F5:D5:48:9D:72:D2:40:D3:93:24:89:46:81:DA:04:89:79:87:3A:3E:9A:BE:EB:81:E1"
+      ]
+    }
   }
 ]
