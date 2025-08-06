@@ -20,10 +20,18 @@
       },
       {
         "appIDs": [
-            "XCZ83B56HU.graceapp.womensbible"
+          "XCZ83B56HU.graceapp.womensbible"
         ],
         "paths": [
           "/universal_links/bible_for_women/*"
+        ]
+      },
+      {
+        "appIDs": [
+          "XCZ83B56HU.nivbible.offline.devotion.study"
+        ],
+        "paths": [
+          "/universal_links/bible_niv/*"
         ]
       }
     ]
@@ -32,7 +40,8 @@
     "apps": [
       "XCZ83B56HU.nkjv.biblequiz",
       "XCZ83B56HU.bibleKJV.bible.kingjamesbible",
-      "XCZ83B56HU.graceapp.womensbible"
+      "XCZ83B56HU.graceapp.womensbible",
+      "XCZ83B56HU.nivbible.offline.devotion.study"
     ]
   }
 }
