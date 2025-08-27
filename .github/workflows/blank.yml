@@ -1,0 +1,71 @@
+name: cron
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 * * * *'
+
+jobs:
+  generate:
+    name: Generate on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate Content
+        uses: satackey/action-js-inline@v0.0.2
+        with:
+          required-packages: date-fns axios
+          script: |
+            const fs = require('fs')
+            const path = require('path')
+            const date_fns = require('date-fns')
+            const axios = require('axios')
+
+            const saveDir = path.join('dist', 'gh-pages')
+            if (!fs.existsSync(saveDir)) {
+              fs.mkdirSync(saveDir, { recursive: true });
+            }
+
+            // await await axios.get('https://www.bibliaon.com/api/daily-content/')
+            const versesResp = await axios.get('https://www.bibliaon.com/api/daily-content/verses/')
+            if (versesResp.status === axios.HttpStatusCode.Ok) {
+              if (versesResp.data.status === 200) {
+                  for (const item of versesResp.data.data) {
+                    fs.writeFileSync(path.join(saveDir, `${item.date}.json`), JSON.stringify(item))
+                  }
+              }
+            }
+            const devotionalsResp = await axios.get('https://www.bibliaon.com/api/daily-content/devotionals/')
+            if (devotionalsResp.status === axios.HttpStatusCode.Ok) {
+              if (devotionalsResp.data.status === 200) {
+                for (const item of devotionalsResp.data.data) {
+                  fs.writeFileSync(path.join(saveDir, `${item.date}.json`), JSON.stringify(item))
+                }
+              }
+            }
+      - name: Checkout Github Pages
+        continue-on-error: true # 忽略 gh-pages 分支未创建
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Merge Github Pages
+        run: |
+          # 避免 gh-pages 分支未创建
+          mkdir -p gh-pages‌
+          #
+          if [ -d dist/gh-pages ]; then cp -rf dist/gh-pages/. gh-pages/; fi
+      - name: Deploy Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: gh-pages
+          branch: gh-pages
