@@ -1,4 +1,4 @@
-name: cron
+name: bible-pt-cron
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
             const date_fns = require('date-fns')
             const axios = require('axios')
 
-            const saveDir = path.join('dist', 'gh-pages')
+            const saveDir = path.join('dist', 'gh-pages', 'bible', 'pt')
             if (!fs.existsSync(saveDir)) {
               fs.mkdirSync(saveDir, { recursive: true });
             }
