@@ -33,6 +33,14 @@
         "paths": [
           "/universal_links/bible_niv/*"
         ]
+      },
+      {
+        "appIDs": [
+          "XCZ83B56HU.seuempresa.bibliasagrada"
+        ],
+        "paths": [
+          "/universal_links/bible_pt_aa/*"
+        ]
       }
     ]
   },
@@ -41,7 +49,8 @@
       "XCZ83B56HU.nkjv.biblequiz",
       "XCZ83B56HU.bibleKJV.bible.kingjamesbible",
       "XCZ83B56HU.graceapp.womensbible",
-      "XCZ83B56HU.nivbible.offline.devotion.study"
+      "XCZ83B56HU.nivbible.offline.devotion.study",
+      "XCZ83B56HU.seuempresa.bibliasagrada"
     ]
   }
 }
