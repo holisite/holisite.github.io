@@ -37,29 +37,22 @@ jobs:
 
             const versesSaveDir = path.join(saveDir, 'verses')
             fs.mkdirSync(versesSaveDir, { recursive: true });
-            fs.mkdirSync(path.join(versesSaveDir, 'source'), { recursive: true });
             const versesResp = await axios.get('https://www.bibliaon.com/api/daily-content/verses/')
             if (versesResp.status === axios.HttpStatusCode.Ok) {
               if (versesResp.data.status === 200) {
                   for (const item of versesResp.data.data) {
-                    fs.writeFileSync(path.join(versesSaveDir, 'source', `${item.date}.json`), JSON.stringify(item))
-                    fs.writeFileSync(path.join(versesSaveDir, `${item.date}.json`), JSON.stringify({
-                      'date': item.date,
-                      'reference': item.title,
-                      'verse': item.verse,
-                    }))
+                    fs.writeFileSync(path.join(versesSaveDir, `${item.date}.json`), JSON.stringify(item))
                   }
               }
             }
 
             const devotionalsSaveDir = path.join(saveDir, 'devotionals')
             fs.mkdirSync(devotionalsSaveDir, { recursive: true });
-            fs.mkdirSync(path.join(devotionalsSaveDir, 'source'), { recursive: true });
             const devotionalsResp = await axios.get('https://www.bibliaon.com/api/daily-content/devotionals/')
             if (devotionalsResp.status === axios.HttpStatusCode.Ok) {
               if (devotionalsResp.data.status === 200) {
                 for (const item of devotionalsResp.data.data) {
-                  fs.writeFileSync(path.join(devotionalsSaveDir, 'source', `${item.date}.json`), JSON.stringify(item))
+                  fs.writeFileSync(path.join(devotionalsSaveDir, `${item.date}.json`), JSON.stringify(item))
                 }
               }
             }
