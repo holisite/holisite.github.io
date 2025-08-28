@@ -46,5 +46,17 @@
         "2A:A5:4D:EF:B7:AE:66:F5:D5:48:9D:72:D2:40:D3:93:24:89:46:81:DA:04:89:79:87:3A:3E:9A:BE:EB:81:E1"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "seubiblia.portuguese.bible.portuguese.reading.study.verses",
+      "sha256_cert_fingerprints": [
+        "88:1D:D3:CA:2F:63:BB:EC:0D:16:7D:B4:F6:98:1B:3C:84:28:D7:9B:8D:A3:42:A3:F5:0B:98:07:48:02:F0:76"
+      ]
+    }
   }
 ]
