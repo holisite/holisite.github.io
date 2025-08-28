@@ -19,8 +19,8 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Generate Content
+        uses: actions/checkout@v3        
+      - name: Generate BíbliaOn Api Content
         uses: satackey/action-js-inline@v0.0.2
         with:
           required-packages: date-fns axios
@@ -30,7 +30,7 @@ jobs:
             const date_fns = require('date-fns')
             const axios = require('axios')
 
-            const saveDir = path.join('dist', 'gh-pages', 'bible', 'pt')
+            const saveDir = path.join('dist', 'gh-pages', 'bible', 'pt', 'api')
             fs.mkdirSync(saveDir, { recursive: true });
 
             // await await axios.get('https://www.bibliaon.com/api/daily-content/')
@@ -56,6 +56,9 @@ jobs:
                 }
               }
             }
+      - name: Generate BíbliaOn Html Content
+        run: |
+          echo "Download Html"
       - name: Checkout Github Pages
         continue-on-error: true # 忽略 gh-pages 分支未创建
         uses: actions/checkout@v3
