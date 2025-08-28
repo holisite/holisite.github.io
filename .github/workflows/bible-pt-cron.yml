@@ -58,7 +58,14 @@ jobs:
             }
       - name: Generate BíbliaOn Html Content
         run: |
-          echo "Download Html"
+          today=$(date +%F)  # 格式 2025-08-28
+
+          mkdir -p versiculo_do_dia palavra_do_dia salmo_do_dia devocional_diario
+
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/versiculo_do_dia/" -o "versiculo_do_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/palavra_do_dia/" -o "palavra_do_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/salmo_do_dia/" -o "salmo_do_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/devocional_diario/" -o "devocional_diario/${today}.html"
       - name: Checkout Github Pages
         continue-on-error: true # 忽略 gh-pages 分支未创建
         uses: actions/checkout@v3
