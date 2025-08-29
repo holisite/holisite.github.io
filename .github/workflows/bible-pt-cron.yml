@@ -1,4 +1,4 @@
-name: bible-pt-pt-cron
+name: bible-pt-cron
 
 on:
   workflow_dispatch:
@@ -70,6 +70,16 @@ jobs:
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/palavra_do_dia/" -o "$base/palavra_do_dia/${today}.html"
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/salmo_do_dia/" -o "$base/salmo_do_dia/${today}.html"
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/devocional_diario/" -o "$base/devocional_diario/${today}.html"
+      - name: Generate Bíblia Online (NVI) Content
+        run: |
+          today=$(date +%F)  # 例如 2025-08-28
+
+          base="dist/gh-pages/bible/pt-br/html"
+          mkdir -p "$base/versiculos-do-dia" \
+                   "$base/devocional-diario"
+
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaonline.com.br/nvi" -o "$base/versiculos-do-dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaonline.com.br/devocional-diario?b=nvi" -o "$base/devocional-diario/${today}.html"
       - name: Checkout Github Pages
         continue-on-error: true # 忽略 gh-pages 分支未创建
         uses: actions/checkout@v3
