@@ -1,4 +1,4 @@
-name: bible-pt-cron
+name: bible-pt-pt-cron
 
 on:
   workflow_dispatch:
