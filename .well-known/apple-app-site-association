@@ -39,7 +39,8 @@
           "XCZ83B56HU.seuempresa.bibliasagrada"
         ],
         "paths": [
-          "/universal_links/bible_pt_aa/*"
+          "/universal_links/bible_pt_aa/*",
+          "/universal_links/bible_pt_br_ara/*"
         ]
       }
     ]
