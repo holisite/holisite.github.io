@@ -1,4 +1,4 @@
-name: bible-pt-cron
+name: bible-cron
 
 on:
   workflow_dispatch:
@@ -70,6 +70,20 @@ jobs:
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/palavra_do_dia/" -o "$base/palavra_do_dia/${today}.html"
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/salmo_do_dia/" -o "$base/salmo_do_dia/${today}.html"
           curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/devocional_diario/" -o "$base/devocional_diario/${today}.html"
+      - name: Generate BíbliaOn(ES) Html Content
+        run: |
+          today=$(date +%F)  # 例如 2025-08-28
+
+          base="dist/gh-pages/bible/es/html"
+          mkdir -p "$base/versiculo_del_dia" \
+                   "$base/palabra_del_dia" \
+                   "$base/salmo_del_dia" \
+                   "$base/devocional_diario"
+
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/es/versiculo_del_dia/" -o "$base/versiculo_del_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/es/palabra_del_dia/" -o "$base/palabra_del_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/es/salmo_del_dia/" -o "$base/salmo_del_dia/${today}.html"
+          curl --retry 3 --retry-delay 5 -sS "https://www.bibliaon.com/es/devocional_diario/" -o "$base/devocional_diario/${today}.html"
       - name: Generate Bíblia Online (NVI) Content
         run: |
           today=$(date +%F)  # 例如 2025-08-28
