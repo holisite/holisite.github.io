@@ -58,5 +58,17 @@
         "88:1D:D3:CA:2F:63:BB:EC:0D:16:7D:B4:F6:98:1B:3C:84:28:D7:9B:8D:A3:42:A3:F5:0B:98:07:48:02:F0:76"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "biblia.la.biblia.espanol.biblia.offline.biblia.diaria.palabra.de.dios",
+      "sha256_cert_fingerprints": [
+        "50:BA:CA:C5:FF:DF:E8:46:DA:6C:BE:D7:10:E4:DE:CD:E2:DD:8D:CA:0A:19:2B:1E:F6:82:C9:75:C5:DD:61:B7"
+      ]
+    }
   }
 ]
