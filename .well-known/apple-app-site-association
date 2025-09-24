@@ -42,6 +42,14 @@
           "/universal_links/bible_pt_aa/*",
           "/universal_links/bible_pt_br_ara/*"
         ]
+      },
+      {
+        "appIDs": [
+          "XCZ83B56HU.biblia.la.biblia.espanol.biblia.offline"
+        ],
+        "paths": [
+          "/universal_links/bible_es_la_nvi/*"
+        ]
       }
     ]
   },
@@ -51,7 +59,8 @@
       "XCZ83B56HU.bibleKJV.bible.kingjamesbible",
       "XCZ83B56HU.graceapp.womensbible",
       "XCZ83B56HU.nivbible.offline.devotion.study",
-      "XCZ83B56HU.seuempresa.bibliasagrada"
+      "XCZ83B56HU.seuempresa.bibliasagrada",
+      "XCZ83B56HU.biblia.la.biblia.espanol.biblia.offline"
     ]
   }
 }
