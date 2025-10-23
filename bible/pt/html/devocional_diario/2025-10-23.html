@@ -484,7 +484,12 @@
                         });
                     }
 
-                    apstag.fetchBids({slots: [slot], timeout: 2000},
+                    const apsRefreshSlot = {
+                        slotID: slot.getSlotElementId(),
+                        sizes: slot.getSizes().map(size => [size.getWidth(), size.getHeight()])
+                    };
+
+                    apstag.fetchBids({slots: [apsRefreshSlot], timeout: 2000},
                         function(bids) {
                             googletag.cmd.push(function(){
                                 apstag.setDisplayBids();
@@ -597,7 +602,12 @@
                         });
                     }
 
-                    apstag.fetchBids({slots: [slot], timeout: 2000},
+                    const apsRefreshSlot = {
+                        slotID: slot.getSlotElementId(),
+                        sizes: slot.getSizes().map(size => [size.getWidth(), size.getHeight()])
+                    };
+
+                    apstag.fetchBids({slots: [apsRefreshSlot], timeout: 2000},
                         function(bids) {
                             googletag.cmd.push(function(){
                                 apstag.setDisplayBids();
@@ -674,7 +684,12 @@
                         });
                     }
 
-                    apstag.fetchBids({slots: [mcslot], timeout: 2000},
+                    const apsRefreshSlot = {
+                        slotID: mcslot.getSlotElementId(),
+                        sizes: mcslot.getSizes().map(size => [size.getWidth(), size.getHeight()])
+                    };
+
+                    apstag.fetchBids({slots: [apsRefreshSlot], timeout: 2000},
                         function(bids) {
                             googletag.cmd.push(function(){
                                 apstag.setDisplayBids();
@@ -728,7 +743,12 @@
                         });
                     }
 
-                    apstag.fetchBids({slots: [mcslot], timeout: 2000},
+                    const apsRefreshSlot = {
+                        slotID: mcslot.getSlotElementId(),
+                        sizes: mcslot.getSizes().map(size => [size.getWidth(), size.getHeight()])
+                    };
+
+                    apstag.fetchBids({slots: [apsRefreshSlot], timeout: 2000},
                         function(bids) {
                             googletag.cmd.push(function(){
                                 apstag.setDisplayBids();
@@ -1181,45 +1201,52 @@
         <div class="devcal-wrap">
             <span class="devcal-month">OUTUBRO</span>
             <div class="devday-wrap">
-                <span class="devday-number">22</span>
-                <span class="devday-txt">QUARTA</span>
+                <span class="devday-number">23</span>
+                <span class="devday-txt">QUINTA</span>
             </div>
         </div>
 
                     <h2 class="dev-label">Devocional de Hoje</h2>
         
-        <h3 class="dev-title">Chegai-vos a Deus</h3>
+        <h3 class="dev-title">Sendo capacitado por Deus</h3>
         <div class="articlebody">
             <blockquote>
-<p>Chegai-vos para Deus, e ele se chegará para vós. Limpai as mãos, pecadores; e, vós de espírito vacilante, purificai os corações.<br>
-- Tiago 4:8</p>
+<p>Tudo posso naquele que me fortalece.<br>
+- Filipenses 4:13</p>
 </blockquote>
 
-<p>Ter uma experiência profunda com Deus é o maior privilégio que um ser humano pode ter. Não se trata apenas de conhecer sobre Deus, mas de conhecê-Lo de verdade, de sentir Sua presença, ouvir Sua voz e viver de acordo com Sua vontade. Em um mundo tão barulhento e acelerado, é fácil se distrair com as urgências da vida e esquecer o essencial: o relacionamento íntimo com o Criador.</p>
+<p>A vida cristã é um caminho de desafios, mas também de vitórias e conquistas. Muitas vezes, nos sentimos incapazes diante das situações que enfrentamos, seja uma tarefa difícil, uma responsabilidade nova ou uma luta espiritual. No entanto, Deus não escolhe os capacitados; Ele capacita os escolhidos. Quando nos dispomos a servir com um coração sincero, o Senhor derrama sobre nós Sua força, sabedoria e graça para cumprir aquilo que Ele nos confiou.</p>
 
-<p>Deus deseja se revelar a nós. Ele não é um ser distante ou inacessível; é um Pai amoroso que anseia por comunhão com Seus filhos. Mas essa experiência profunda exige entrega. É preciso abrir o coração, abandonar o orgulho e deixar que o Espírito Santo conduza cada área da nossa vida. Quando nos aproximamos de Deus com sinceridade, Ele nos envolve com Sua graça e transforma o nosso interior.</p>
+<p>A capacitação de Deus não vem de habilidades humanas, mas do poder do Espírito Santo que habita em nós. É Ele quem nos ensina, consola, fortalece e dirige cada passo. Quando buscamos a presença de Deus em oração e meditação na Palavra, nossa mente é renovada e o medo dá lugar à fé. Assim, passamos a compreender que a nossa suficiência vem de Cristo, e não de nós mesmos.</p>
 
-<p>A experiência com Deus vai além de momentos emocionais. Ela se manifesta no dia a dia, na forma como perdoamos, amamos e servimos. É um processo contínuo de santificação, no qual aprendemos a confiar mais e depender menos de nós mesmos. Quanto mais tempo passamos em Sua presença, mais nos tornamos parecidos com Cristo.</p>
+<p>Moisés se achava incapaz de falar diante de Faraó, mas Deus o usou para libertar um povo inteiro. Davi era apenas um pastor de ovelhas, mas foi capacitado para derrotar gigantes e governar Israel. Da mesma forma, o Senhor deseja usar cada um de nós, em nossa realidade, para manifestar Sua glória no mundo.</p>
 
-<p>Busque a Deus em oração, medite na Sua Palavra e cultive o silêncio da alma para ouvi-Lo. A presença dEle não é um sentimento passageiro, mas uma realidade constante para aqueles que O buscam de todo o coração.</p>
+<p>Ser capacitado por Deus é viver na dependência d’Ele todos os dias. É reconhecer que sem Cristo nada podemos fazer, mas com Ele, tudo é possível. Quando entregamos nossos dons, tempo e coração nas mãos do Pai, Ele transforma o comum em extraordinário e o fraco em forte.</p>
 
-<p>Tenha uma experiência profunda com Deus. Permita que Ele renove sua mente, cure suas feridas e encha sua vida de propósito.</p>
+<p>Permita-se ser moldado e guiado por Deus. Ele já te deu tudo o que precisa para cumprir o propósito d’Ele em sua vida. Confie: o Senhor é quem te capacita!</p>
 
-<h3>Aproximando-se do Pai</h3>
+<h3>5 passos práticos para viver a capacitação de Deus</h3>
 
 <ul>
-	<li>Reserve momentos silenciosos para conversar com Deus. Abra o coração, ouça Sua voz e permita que o Espírito Santo renove sua fé continuamente.</li>
-	<li>Leia a Bíblia não apenas por obrigação, mas para conhecer o caráter de Deus. Deixe cada versículo moldar suas atitudes e fortalecer sua confiança n’Ele.</li>
-	<li>Coloque em prática o que aprende. Sirva com alegria, perdoe com graça e demonstre Cristo em suas ações diárias, tornando-se reflexo do amor d'Ele.</li>
+	<li>
+<strong>Confie na direção de Deus:</strong> Entregue seus planos a Deus diariamente, permitindo que Ele conduza suas decisões com sabedoria, paz e propósito, fortalecendo sua fé continuamente n’Ele.</li>
+	<li>
+<strong>Alimente-se da Palavra:</strong> Leia e medite nas Escrituras todos os dias, permitindo que a verdade de Deus renove sua mente, transforme atitudes e fortaleça sua confiança espiritual.</li>
+	<li>
+<strong>Persevere na oração:</strong> Busque intimidade com Deus por meio da oração constante, abrindo seu coração, entregando ansiedades e recebendo força, direção e descanso em Sua presença amorosa.</li>
+	<li>
+<strong>Sirva com humildade:</strong> Use seus dons e talentos para abençoar outras pessoas, reconhecendo que toda capacidade vem do Senhor e deve glorificar o nome d’Ele.</li>
+	<li>
+<strong>Caminhe em obediência:</strong> Siga os mandamentos do Senhor com fé e amor, permitindo que o Espírito Santo o guie, molde seu caráter e fortaleça sua caminhada cristã diariamente.</li>
 </ul>
 
 <h4>Para orar:</h4>
 
 <div class="callout">
-<p>Senhor meu Deus, quero Te conhecer. Purifica meu coração, renova minha mente e enche-me com Teu Espírito. Que Tua presença seja meu refúgio, Tua vontade meu guia e Teu amor minha motivação. Fala comigo, transforma-me e faz-me viver para Te glorificar em cada detalhe da minha vida. Amém.</p>
+<p>Senhor meu Deus, agradeço por me capacitar a cada dia. Fortalece minha fé, renova minhas forças e guia meus passos segundo Tua vontade. Que eu dependa sempre do Teu poder e não das minhas limitações. Usa minha vida para glorificar Teu nome e cumprir Teus propósitos. Em nome de Jesus, amém.</p>
 </div>
 
-<p>Veja também: <a href="/buscar_a_deus/">Versículos sobre buscar a Deus</a>.</p>        </div>
+<p>Veja também: <a href="/crescimento_espiritual/">Versículos sobre Crescimento Espiritual</a></p>        </div>
 
         <div class="daily-card__footer">
             <div class="daily-card__footer--socials-feedback">
@@ -1260,7 +1287,7 @@
         }
     }
 </script>        <div class="socials-widget socials-wrapper">
-    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/dd_chegai_vos_a_deus/" data-text-selector-id="devocional_hoje">
+    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/dd_sendo_capacitado_por_deus/" data-text-selector-id="devocional_hoje">
 <div class="sg-facebook-share"><button class="sg-facebook-btn sg-icon-only" title="Compartilhar | Facebook">
                             <span class="icon-sg-social icon-sg-social-facebook"></span>
                             
@@ -1307,43 +1334,49 @@
         <div class="devcal-wrap">
             <span class="devcal-month">OUTUBRO</span>
             <div class="devday-wrap">
-                <span class="devday-number">21</span>
-                <span class="devday-txt">TERÇA</span>
+                <span class="devday-number">22</span>
+                <span class="devday-txt">QUARTA</span>
             </div>
         </div>
 
         
-        <h3 class="dev-title">Cuide disto e Deus cuidará do resto</h3>
+        <h3 class="dev-title">Chegai-vos a Deus</h3>
         <div class="articlebody">
             <blockquote>
-<p>Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas serão acrescentadas a vocês.</p>
-
-<p>- Mateus 6:33</p>
+<p>Chegai-vos para Deus, e ele se chegará para vós. Limpai as mãos, pecadores; e, vós de espírito vacilante, purificai os corações.<br>
+- Tiago 4:8</p>
 </blockquote>
 
-<p>Existem muitas coisas que podem nos deixar ansiosos: a falta de emprego, a preocupação com comida e roupa, o medo do futuro Como podemos garantir nossa segurança? Mas Jesus disse que não precisamos ter medo. Deus sabe do que precisamos e ele cuida de nós.</p>
+<p>Ter uma experiência profunda com Deus é o maior privilégio que um ser humano pode ter. Não se trata apenas de conhecer sobre Deus, mas de conhecê-Lo de verdade, de sentir Sua presença, ouvir Sua voz e viver de acordo com Sua vontade. Em um mundo tão barulhento e acelerado, é fácil se distrair com as urgências da vida e esquecer o essencial: o relacionamento íntimo com o Criador.</p>
 
-<p>Nossa grande prioridade deve ser o Reino de Deus. Nada é mais importante que ver o evangelho crescer e viver para dar glória a Deus. Quando nos dedicamos ao Reino de Deus, podemos viver livres da preocupação com o futuro, porque Deus garante nossa segurança por toda a eternidade.</p>
+<p>Deus deseja se revelar a nós. Ele não é um ser distante ou inacessível; é um Pai amoroso que anseia por comunhão com Seus filhos. Mas essa experiência profunda exige entrega. É preciso abrir o coração, abandonar o orgulho e deixar que o Espírito Santo conduza cada área da nossa vida. Quando nos aproximamos de Deus com sinceridade, Ele nos envolve com Sua graça e transforma o nosso interior.</p>
 
-<h3>Para buscar o Reino de Deus:</h3>
+<p>A experiência com Deus vai além de momentos emocionais. Ela se manifesta no dia a dia, na forma como perdoamos, amamos e servimos. É um processo contínuo de santificação, no qual aprendemos a confiar mais e depender menos de nós mesmos. Quanto mais tempo passamos em Sua presença, mais nos tornamos parecidos com Cristo.</p>
+
+<p>Busque a Deus em oração, medite na Sua Palavra e cultive o silêncio da alma para ouvi-Lo. A presença dEle não é um sentimento passageiro, mas uma realidade constante para aqueles que O buscam de todo o coração.</p>
+
+<p>Tenha uma experiência profunda com Deus. Permita que Ele renove sua mente, cure suas feridas e encha sua vida de propósito.</p>
+
+<h3>Aproximando-se do Pai</h3>
 
 <ul>
-<li>Quando você sente medo do futuro, ore a Deus por ajuda</li>
-	<li>Lembre-se que Deus está no controle de todas as coisas</li>
-	<li>Leia a Bíblia e aprenda a viver de maneira agradável a Deus</li>
-	<li>Envolva-se em uma igreja, participando ativamente</li>
+	<li>Reserve momentos silenciosos para conversar com Deus. Abra o coração, ouça Sua voz e permita que o Espírito Santo renove sua fé continuamente.</li>
+	<li>Leia a Bíblia não apenas por obrigação, mas para conhecer o caráter de Deus. Deixe cada versículo moldar suas atitudes e fortalecer sua confiança n’Ele.</li>
+	<li>Coloque em prática o que aprende. Sirva com alegria, perdoe com graça e demonstre Cristo em suas ações diárias, tornando-se reflexo do amor d'Ele.</li>
 </ul>
 
 <h4>Para orar:</h4>
 
-<blockquote>
-<p>Senhor, sei que você está no controle de minha vida. Por favor ajude-me a confiar em você e a vencer o medo do futuro. Mostre-me como posso viver para você. Quero buscar teu Reino e tua justiça e dar glória a você em tudo que faço. Em nome de Jesus, amém.</p>
-</blockquote>        </div>
+<div class="callout">
+<p>Senhor meu Deus, quero Te conhecer. Purifica meu coração, renova minha mente e enche-me com Teu Espírito. Que Tua presença seja meu refúgio, Tua vontade meu guia e Teu amor minha motivação. Fala comigo, transforma-me e faz-me viver para Te glorificar em cada detalhe da minha vida. Amém.</p>
+</div>
+
+<p>Veja também: <a href="/buscar_a_deus/">Versículos sobre buscar a Deus</a>.</p>        </div>
 
         <div class="daily-card__footer">
             <div class="daily-card__footer--socials-feedback">
         <div class="socials-widget socials-wrapper">
-    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/cuide_disto_e_deus_cuidara_do_resto/" data-text-selector-id="devocional_ontem">
+    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/dd_chegai_vos_a_deus/" data-text-selector-id="devocional_ontem">
 <div class="sg-facebook-share"><button class="sg-facebook-btn sg-icon-only" title="Compartilhar | Facebook">
                             <span class="icon-sg-social icon-sg-social-facebook"></span>
                             
@@ -1394,44 +1427,43 @@
         <div class="devcal-wrap">
             <span class="devcal-month">OUTUBRO</span>
             <div class="devday-wrap">
-                <span class="devday-number">20</span>
-                <span class="devday-txt">SEGUNDA</span>
+                <span class="devday-number">21</span>
+                <span class="devday-txt">TERÇA</span>
             </div>
         </div>
 
         
-        <h3 class="dev-title">Dê honra e seja honrado por Deus</h3>
+        <h3 class="dev-title">Cuide disto e Deus cuidará do resto</h3>
         <div class="articlebody">
             <blockquote>
-<p>Dediquem-se uns aos outros com amor fraternal. Prefiram dar honra aos outros mais do que a vocês.<br>
-Romanos 12:10 </p>
+<p>Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas serão acrescentadas a vocês.</p>
+
+<p>- Mateus 6:33</p>
 </blockquote>
 
-<p>Este princípio bíblico é poderoso: amar o próximo. Mais do que palavras, <strong>amar o próximo exige atitude.</strong> Servir os outros requer humildade e entendimento da Palavra. Jesus - que é Rei - veio ao mundo e serviu a todos. Quem somos nós para reivindicarmos honra? </p>
+<p>Existem muitas coisas que podem nos deixar ansiosos: a falta de emprego, a preocupação com comida e roupa, o medo do futuro Como podemos garantir nossa segurança? Mas Jesus disse que não precisamos ter medo. Deus sabe do que precisamos e ele cuida de nós.</p>
 
-<p><strong>Quando nos preocupamos em receber apenas honra, contaminamos o nosso servir.</strong> Ajude o próximo de bom grado, não aguarde por retribuição e seja surpreendido por Deus. Quando servimos aos nossos irmãos, obedecemos aos nossos pais, ou até mesmo executamos uma tarefa no trabalho, faça-os como se estivesse fazendo para Deus. <strong>Só Deus pode retribuir honra com justiça e graça.</strong> </p>
+<p>Nossa grande prioridade deve ser o Reino de Deus. Nada é mais importante que ver o evangelho crescer e viver para dar glória a Deus. Quando nos dedicamos ao Reino de Deus, podemos viver livres da preocupação com o futuro, porque Deus garante nossa segurança por toda a eternidade.</p>
 
-<p>Quando tomamos esta posição, abrimos as portas para o agir de Deus na nossa vida. Amamos e recebemos amor do alto. Esse amor verdadeiro, nos motiva a amar e servir mais e mais. Mesmo quando não reconhecidos - ou até humilhados - Deus nos exaltará no momento devido. Creia, toda glória e honra vêm dele e é para Ele! </p>
-
-<h3>Exercitando a honra </h3>
+<h3>Para buscar o Reino de Deus:</h3>
 
 <ul>
-<li>Não seja movido apenas por interesses pessoais. Sem querer, poderemos afastar as pessoas que amamos devido aos nossos objetivos. </li>
-	<li>Coloque Deus e o Seu Reino como objetivo primordial. Desta forma, todos estarão incluídos nos seus planos. </li>
-	<li>Veja o exemplo de Jesus. Veja nos Evangelhos a forma como Ele serviu e como amou a todos. </li>
+<li>Quando você sente medo do futuro, ore a Deus por ajuda</li>
+	<li>Lembre-se que Deus está no controle de todas as coisas</li>
+	<li>Leia a Bíblia e aprenda a viver de maneira agradável a Deus</li>
+	<li>Envolva-se em uma igreja, participando ativamente</li>
 </ul>
 
-<h4>Para Orar: </h4>
+<h4>Para orar:</h4>
 
 <blockquote>
-<p>Senhor, obrigado pelo o Seu cuidado sobre a minha vida. Quero honrar o Seu nome e servir ao próximo com alegria e verdade. Cria em mim um coração disposto a ajudar, em nome de Jesus, amém!<br>
- </p>
+<p>Senhor, sei que você está no controle de minha vida. Por favor ajude-me a confiar em você e a vencer o medo do futuro. Mostre-me como posso viver para você. Quero buscar teu Reino e tua justiça e dar glória a você em tudo que faço. Em nome de Jesus, amém.</p>
 </blockquote>        </div>
 
         <div class="daily-card__footer">
             <div class="daily-card__footer--socials-feedback">
         <div class="socials-widget socials-wrapper">
-    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/de_honra_e_seja_honrado_por_deus/" data-text-selector-id="devocional_anteontem">
+    <div class="bt-fb"><div class="sg-social-hidden sg-social" data-url="https://www.bibliaon.com/cuide_disto_e_deus_cuidara_do_resto/" data-text-selector-id="devocional_anteontem">
 <div class="sg-facebook-share"><button class="sg-facebook-btn sg-icon-only" title="Compartilhar | Facebook">
                             <span class="icon-sg-social icon-sg-social-facebook"></span>
                             
@@ -1445,7 +1477,7 @@ Romanos 12:10 </p>
         
     </div>
 
-</div><div class="ad-unit ad-unit--pt-br ad-unit-h-100 sg-sticky-timed-ads"><style> @media (min-width:0px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:0;height:0;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:0;}}@media (min-width:270px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:0;height:0;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:0;}}@media (min-width:330px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:300px;height:140px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:140px;}}@media (min-width:340px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:320px;height:140px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:140px;}}@media (min-width:768px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:300px;height:290px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:290px;}}@media (min-width:1100px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:728px;height:130px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:130px;}}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{position:sticky;padding:0px;padding-top:20px;z-index:9;overflow:hidden;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63::before{z-index:-1;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{margin:auto;position:unset;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div::before, #div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63::after{top:0;position:absolute;}</style><div id="div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63" amp="1"></div></div><script>googletag.cmd.push(function(){var sm = googletag.sizeMapping().addSize([0,0], []).addSize([270,0], []).addSize([330,0], [[300,100]]).addSize([340,0], [[320,100]]).addSize([768,0], [[300,250],[250,250],[200,200]]).addSize([1100,0], [[728,90]]).build();var ss = [[300,250],[250,250],[200,200]];var slot = googletag.defineSlot("/1062898/BIBLIAON_BR_ARTICLE_INCONTENT4", ss, "div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63").defineSizeMapping(sm).setCollapseEmptyDiv(false).addService(googletag.pubads());window.Sg_GPT_push_slot(slot);googletag.display(slot);function executeParallelAuctionAlongsidePrebid() {var requestManager = { adserverRequestSent: false, aps: false, prebid: false };function sendAdserverRequest() { 
+</div><h2>O que é um Devocional Diário</h2><p>Devocional diário é um momento especial do seu dia no qual você se dedica a ter um tempo precioso de comunhão com Deus. É muito simples manter uma rotina empolgante de descobertas e crescimento espiritual, separando um momento do seu dia para aproximar-se do Senhor.</p><p>No Devocional você irá ler um versículo da Bíblia, ler uma meditação sobre o texto, refletir sobre os ensinos que poderá aplicar na sua vida e no final, orar.</p><div class="ad-unit ad-unit--pt-br ad-unit-h-100 sg-sticky-timed-ads"><style> @media (min-width:0px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:0;height:0;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:0;}}@media (min-width:270px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:0;height:0;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:0;}}@media (min-width:330px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:300px;height:140px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:140px;}}@media (min-width:340px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:320px;height:140px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:140px;}}@media (min-width:768px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:300px;height:290px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:290px;}}@media (min-width:1100px){#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{width:728px;height:130px;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{height:130px;}}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63{position:sticky;padding:0px;padding-top:20px;z-index:9;overflow:hidden;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63::before{z-index:-1;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div{margin:auto;position:unset;}#div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63 > div::before, #div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63::after{top:0;position:absolute;}</style><div id="div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63" amp="1"></div></div><script>googletag.cmd.push(function(){var sm = googletag.sizeMapping().addSize([0,0], []).addSize([270,0], []).addSize([330,0], [[300,100]]).addSize([340,0], [[320,100]]).addSize([768,0], [[300,250],[250,250],[200,200]]).addSize([1100,0], [[728,90]]).build();var ss = [[300,250],[250,250],[200,200]];var slot = googletag.defineSlot("/1062898/BIBLIAON_BR_ARTICLE_INCONTENT4", ss, "div-gpt-sg-4d4f59d23c1ec86217f466cbf3130b63").defineSizeMapping(sm).setCollapseEmptyDiv(false).addService(googletag.pubads());window.Sg_GPT_push_slot(slot);googletag.display(slot);function executeParallelAuctionAlongsidePrebid() {var requestManager = { adserverRequestSent: false, aps: false, prebid: false };function sendAdserverRequest() { 
             if (requestManager.adserverRequestSent === true) return; 
             requestManager.adserverRequestSent = true; 
             googletag.cmd.push(function() { 
@@ -1474,7 +1506,7 @@ Romanos 12:10 </p>
                     }, 
                 }); 
             });
-        }requestHeaderBids();window.setTimeout(function() { sendAdserverRequest(); }, FAILSAFE_TIMEOUT);}executeParallelAuctionAlongsidePrebid();})</script><h2>O que é um Devocional Diário</h2><p>Devocional diário é um momento especial do seu dia no qual você se dedica a ter um tempo precioso de comunhão com Deus. É muito simples manter uma rotina empolgante de descobertas e crescimento espiritual, separando um momento do seu dia para aproximar-se do Senhor.</p><p>No Devocional você irá ler um versículo da Bíblia, ler uma meditação sobre o texto, refletir sobre os ensinos que poderá aplicar na sua vida e no final, orar.</p><h2>Como fazer o seu Devocional Diário</h2><p>Aqui vão algumas dicas para você obter o máximo da leitura da mensagem bíblica do Devocional Diário:</p><ol><li>
+        }requestHeaderBids();window.setTimeout(function() { sendAdserverRequest(); }, FAILSAFE_TIMEOUT);}executeParallelAuctionAlongsidePrebid();})</script><h2>Como fazer o seu Devocional Diário</h2><p>Aqui vão algumas dicas para você obter o máximo da leitura da mensagem bíblica do Devocional Diário:</p><ol><li>
 <strong>Separe um momento e um local específico</strong>: Seu momento devocional será mais proveitoso se deixar de lado a correria e investir num tempo prazeroso, a sós com Deus.</li><li>
 <strong>Leia o versículo ou trecho bíblico com atenção</strong>: Desenvolva um estilo de vida comprometido com a Palavra de Deus todos os dias e evite distrações.</li><li>
 <strong>Leia a meditação diária</strong>: Reflita e busque compreender o propósito de Deus para a sua vida através dos comentários.</li><li>
