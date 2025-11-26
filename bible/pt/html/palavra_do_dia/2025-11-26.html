@@ -909,12 +909,25 @@
     <script>
     const SKIP_MODE_ALREADY_DONATED = 'already-donated';
     const SKIP_MODE_NO_DONATION = 'no-donation';
+    const SKIP_MODE_CLOSE = 'close';
+
+    const SKIPPED_DONATION_BANNER_TIMEOUT_MS = 1000;
+
+    const SKIPPED_DONATION_BANNER_KEY = 'skippedDonationBanner';
+    const SKIPPED_DONATION_BANNER_TIMESTAMP_KEY = 'skippedDonationBannerTimestamp';
+
+    // Wait time in calendar days
+    const SKIPPED_DONATION_BANNER_WAIT_DAYS = {
+        [SKIP_MODE_ALREADY_DONATED]: 4, // 4 days
+        [SKIP_MODE_NO_DONATION]: 1, // 1 day
+        [SKIP_MODE_CLOSE]: 1, // 1 day
+    }
 
     function hideDonationBanner() {
         document.documentElement.style.setProperty('--donation-banner-display', 'none');
     }
 
-    function collapseDonationBanner(callback) {
+    function animatedHideDonationBanner(callback) {
         const donationBanner = document.querySelector('.donation-banner');
         if (!donationBanner) {
             if (callback) callback();
@@ -946,36 +959,66 @@
             donationBanner.removeEventListener('transitionend', handleTransitionEnd);
             hideDonationBanner();
             if (callback) callback();
-        }, 1000);
+        }, SKIPPED_DONATION_BANNER_TIMEOUT_MS);
     }
 
     function skipDonationBanner(skipMode) {
-        localStorage.setItem('skippedDonationBanner', skipMode);
-        localStorage.setItem('skippedDonationBannerTimestamp', Date.now());
-        localStorage.setItem('skippedDonationBannerPageViews', 0);
-        collapseDonationBanner();
+        localStorage.setItem(SKIPPED_DONATION_BANNER_KEY, skipMode);
+        localStorage.setItem(SKIPPED_DONATION_BANNER_TIMESTAMP_KEY, Date.now());
+        animatedHideDonationBanner();
     }
 
-    function getSkippedDonationPageViews() {
-        const storageValue = localStorage.getItem('skippedDonationBannerPageViews');
-        return storageValue ? parseInt(storageValue) : 0;
+    function getDaysDifference(savedTimestamp, currentTimestamp) {
+        const savedDate = new Date(parseInt(savedTimestamp, 10));
+        const currentDate = new Date(parseInt(currentTimestamp, 10));
+        
+        // Set both dates to midnight for accurate day comparison
+        savedDate.setHours(0, 0, 0, 0);
+        currentDate.setHours(0, 0, 0, 0);
+        
+        // Calculate difference in milliseconds and convert to days
+        const diffMs = currentDate - savedDate;
+        return Math.floor(diffMs / (24 * 60 * 60 * 1000));
+    }
+
+    function shouldShowDonationBanner() {
+        const skippedDonationBanner = localStorage.getItem(SKIPPED_DONATION_BANNER_KEY);
+        if (!skippedDonationBanner) {
+            return true;
+        }
+
+        const timestamp = localStorage.getItem(SKIPPED_DONATION_BANNER_TIMESTAMP_KEY);
+        if (!timestamp) {
+            return true;
+        }
+
+        let requiredWaitDays;
+
+        if (skippedDonationBanner in SKIPPED_DONATION_BANNER_WAIT_DAYS) {
+            requiredWaitDays = SKIPPED_DONATION_BANNER_WAIT_DAYS[skippedDonationBanner];
+        } else {
+            // Unknown mode, show banner
+            return true;
+        }
+
+        const now = Date.now();
+        const daysDifference = getDaysDifference(timestamp, now);
+
+        // If not enough calendar days have passed, don't show banner
+        if (daysDifference < requiredWaitDays) {
+            return false;
+        }
+
+        // Period expired, show banner and clear storage
+        localStorage.removeItem(SKIPPED_DONATION_BANNER_KEY);
+        localStorage.removeItem(SKIPPED_DONATION_BANNER_TIMESTAMP_KEY);
+        return true;
     }
 
     (function() {
-        const skippedDonationBanner = localStorage.getItem('skippedDonationBanner');
-        if (!skippedDonationBanner) return;
-
-        const skippedDonationBannerPageViews = getSkippedDonationPageViews();
-        localStorage.setItem('skippedDonationBannerPageViews', skippedDonationBannerPageViews + 1);
-        if (skippedDonationBanner === SKIP_MODE_ALREADY_DONATED && skippedDonationBannerPageViews >= 30) {
-            return;
+        if (!shouldShowDonationBanner()) {
+            hideDonationBanner();
         }
-
-        if (skippedDonationBanner === SKIP_MODE_NO_DONATION && skippedDonationBannerPageViews >= 21) {
-            return;
-        }
-
-        hideDonationBanner();
     })();
 
     function setupDonationBannerListeners() {
@@ -986,7 +1029,7 @@
         if (closeButton) {
             closeButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                collapseDonationBanner();
+                skipDonationBanner(SKIP_MODE_CLOSE);
             });
         }
 
