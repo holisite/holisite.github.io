@@ -70,5 +70,17 @@
         "50:BA:CA:C5:FF:DF:E8:46:DA:6C:BE:D7:10:E4:DE:CD:E2:DD:8D:CA:0A:19:2B:1E:F6:82:C9:75:C5:DD:61:B7"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "weatherapp.forecast.live.elements.climate.track.report",
+      "sha256_cert_fingerprints": [
+        "EF:BF:E0:70:F9:46:A4:28:4A:CF:07:04:D9:22:C4:7F:1D:1D:C7:1B:CB:AC:93:56:7B:64:69:0E:F4:CF:89:30"
+      ]
+    }
   }
 ]
