@@ -50,6 +50,14 @@
         "paths": [
           "/universal_links/bible_es_la_nvi/*"
         ]
+      },
+      {
+        "appIDs": [
+          "XCZ83B56HU.kakobuy.discovery.finds.lists.deals"
+        ],
+        "paths": [
+          "/universal_links/kakobuy/*"
+        ]
       }
     ]
   },
@@ -60,7 +68,8 @@
       "XCZ83B56HU.graceapp.womensbible",
       "XCZ83B56HU.nivbible.offline.devotion.study",
       "XCZ83B56HU.seuempresa.bibliasagrada",
-      "XCZ83B56HU.biblia.la.biblia.espanol.biblia.offline"
+      "XCZ83B56HU.biblia.la.biblia.espanol.biblia.offline",
+      "XCZ83B56HU.kakobuy.discovery.finds.lists.deals"
     ]
   }
 }
